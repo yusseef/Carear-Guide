@@ -175,11 +175,8 @@ header{
 	background: rgb(238, 255, 5);
 }
 
-input[type="radio"] checked {
-    background-color:black;
-}
 
-.txt input[type="radio"]:checked + label {
+input[type="radio"]:checked + label {
     background:yellow;
 }
 

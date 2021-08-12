@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import SurveyUser
+from .models import SurveyUser, Questions
 from django.http import HttpResponse
 from .forms import SigninForm
 # Create your views here.
@@ -19,5 +19,14 @@ def Signin(request):
 
 def Survey(request,pk):
     qs = SurveyUser.objects.filter(pk=pk)
-    context = {'qs':qs}
+    questions = Questions.objects.all()
+    answer1 = request.POST.get("2")
+    print(answer1)
+    context = {'qs':qs, 'questions':questions}
     return render(request, 'survey.html', context)
+
+def test(request):
+    
+    result = request.POST.get('result')
+    print(result)
+    return render(request, 'test.html', )

@@ -5,34 +5,31 @@ class SurveyUser(models.Model):
     name = models.CharField(max_length = 60)
     email = models.EmailField(max_length = 255)
     phone = models.CharField(max_length = 60)
-
+    
     def __str__(self):
         return self.name
 
 class Questions(models.Model):
     class CategoryChoices(models.TextChoices):
-        WEB = 'Web'
-        Android = 'Android'
+        R = 'R'
+        A = 'A'
+        I = 'I'
+        S = 'S'
+        E = 'E'
+        C = 'C'
+        
 
     question = models.CharField(max_length = 200)
     category = models.CharField(max_length=90, choices=CategoryChoices.choices)
+    img = models.ImageField(upload_to='photos/', blank=True)
 
     def __str__(self):
         return self.question
 
-class Answers(models.Model):
-  
-    class AnswerChoices(models.TextChoices):
-        AGREE = 'Agree'
-        DISAGREE = 'Disagree'
 
-    question = models.ForeignKey(Questions, on_delete=models.DO_NOTHING)
-    answer = models.BooleanField(default=True, blank=True)
-    
-    
 class SurveyResults(models.Model):
-    user = models.ForeignKey(SurveyUser, on_delete=models.DO_NOTHING)
+    survey_user = models.ForeignKey(SurveyUser, on_delete=models.DO_NOTHING)
     result = models.CharField(max_length=80)
 
     def __str__(self):
-        return self.User
+        return self.result
