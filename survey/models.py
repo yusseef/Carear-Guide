@@ -28,8 +28,8 @@ class Questions(models.Model):
 
 
 class SurveyResults(models.Model):
-    survey_user = models.ForeignKey(SurveyUser, on_delete=models.DO_NOTHING)
-    result = models.CharField(max_length=80)
+    survey_user = models.ForeignKey(SurveyUser, on_delete=models.DO_NOTHING, null=True)
+    result = models.CharField(max_length=80, null=True)
 
     def __str__(self):
         return self.result
