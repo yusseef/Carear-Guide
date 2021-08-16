@@ -39,8 +39,13 @@ def Survey(request,pk):
         Final_result = SurveyResults(survey_user= User)
         Final_result.result = result
         Final_result.save()
+        return redirect('Result', pk = Final_result.id)
     
     context = {'qs':qs, 'questions':questions}
     return render(request, 'survey.html', context)
 
 
+def Result(request, pk):
+    qs = SurveyResults.objects.get(pk = pk)
+    context = {'result': qs}
+    return render(request, 'result.html',  context)
