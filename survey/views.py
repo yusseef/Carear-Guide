@@ -11,29 +11,28 @@ def Signin(request):
 
        if form.is_valid():
            user = form.save()
-           return redirect('user', pk=user.id)
+           return redirect('user', pk = user.id)
            
 
    context = {'form': form}
    return render(request, 'index.html', context) 
    
 
-def Survey(request,pk):
+def Survey(request, pk):
     lst = []
+    ID = []
     qs = SurveyUser.objects.filter(pk=pk)
     User = SurveyUser.objects.get(pk = pk)
     questions = Questions.objects.all()
+    ids = Questions.objects.all().values_list('id', flat = True)
+    for i in ids:
+        ID.append(i)
     if request.method == 'POST':
-        answer1 = request.POST.get("2")
-        answer2 = request.POST.get("3")
-        answer3 = request.POST.get("4")
-        answer4 = request.POST.get("5")
-        print('hi')
-        lst.append(answer1)
-        lst.append(answer2)
-        lst.append(answer3)
-        lst.append(answer4)
+        for i in ID:
+            answer = request.POST.get(f"{i}")
+            lst.append(answer)
         List = [x for x in lst if not x=='no']
+        print(List)
         counter = Counter(List)
         result = counter.most_common(1)[0][0]
         Final_result = SurveyResults(survey_user= User)

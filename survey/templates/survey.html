@@ -25,10 +25,10 @@
 				<p>{{question.question}}</p>
 				
 				
-				<input id="{{question.id}}" type='radio' name="{{question.id}}" value="{{question.category}}">
+				<input id="{{question.id}}" onclick="plusSlides(1)" type='radio' name="{{question.id}}" value="{{question.category}}">
 				<label for="{{question.id}}">Yes</label>
 				<br> 
-				<input id="{{question.id}}1" type='radio' name="{{question.id}}" value="no">
+				<input id="{{question.id}}1" onclick="plusSlides(1)" type='radio' name="{{question.id}}" value="no">
 				<label for="{{question.id}}1">No</label>
 				<br>
 				
@@ -62,7 +62,7 @@
 		
 		<!-- onclick js -->
 		
-  		<a class="next" onclick="plusSlides(1)">Next</a>
+  		
 		
 	</form>
 		<!-- /onclick js -->
