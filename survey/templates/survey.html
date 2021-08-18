@@ -21,7 +21,7 @@
 		{% for question in questions %}
 		<div class="myslide fade">
 			<div class="txt">
-				<img class="img" src = "{% static 'img/svg-3.svg'%}">
+				<img class="img" src = "{{question.icon.url}}">
 				<p>{{question.question}}</p>
 				
 				
@@ -30,12 +30,13 @@
 				<br> 
 				<input id="{{question.id}}1" onclick="plusSlides(1)" type='radio' name="{{question.id}}" value="no">
 				<label for="{{question.id}}1">No</label>
+				<br><br>
 				
 				
 				
 				
 			</div>
-			<img src="{{question.img.url}}" style="width: 100%; height: 150%; object-fit:fill;">
+			<img src="{{question.img.url}}" style="width: 100%; height: 150%; object-fit:cover;">
 		</div>
 		{% endfor %}
 			
@@ -48,7 +49,7 @@
 				<p>You finished all questions</p>
 				
 				
-				<input type="submit" class="btn" value="Submit">
+				<input type="submit" class="btn" value="see the result">
 				
 				
 				

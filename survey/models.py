@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import FileExtensionValidator
 # Create your models here.
 class SurveyUser(models.Model):
     name = models.CharField(max_length = 60)
@@ -22,6 +22,7 @@ class Questions(models.Model):
     question = models.CharField(max_length = 200)
     category = models.CharField(max_length=90, choices=CategoryChoices.choices)
     img = models.ImageField(upload_to='photos/', blank=True)
+    icon = models.FileField(upload_to='photos/', blank=True, null=True, validators=[FileExtensionValidator(['pdf', 'doc', 'svg'])])
 
     def __str__(self):
         return self.question
