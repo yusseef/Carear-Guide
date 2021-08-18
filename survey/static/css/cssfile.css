@@ -1,5 +1,6 @@
 
 /* 1 */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -10,7 +11,7 @@ header{
     height: 60px;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 0%;
 	z-index: 2;
 }
 #logo{
@@ -35,7 +36,8 @@ header{
 .sign{
 	float: right;
 	line-height: 60px;
-	margin-right: 40px;
+	margin-right: 640px;
+	
 }
 .sign a{
 	color: #fff;
@@ -48,8 +50,8 @@ header{
 	padding: 6px 15px;
 }
 .sign a:hover{
-	color: #00a7ff; /* blue */
-	border-color: #00a7ff; /* blue */
+	color: #fbff00; /* blue */
+	border-color: #fbff00; /* blue */
 }
 /* /1 */
 
@@ -57,11 +59,12 @@ header{
 .slider{
 	position: relative;
 	width: 100%;
+	top:10%;
 	background: #2c3e50; /* darckblue */
 }
 .myslide{
-	height: 655px;
-	display: none;
+	height: 800px;
+	display:block;
 	overflow: hidden;
 }
 
@@ -86,33 +89,9 @@ header{
 	border-radius: 10px;
 	border-color: transparent;
 	background-color:white;
-	color:#000;
 	bottom:-20%;
 	right:48%;
 }
-.dotsbox{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%);
-	bottom: 20px;
-	cursor: pointer;
-}
-.dot{
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	border-radius: 50%;
-	margin: 0 10px;
-	cursor: pointer;
-}
-/* /2 */
-
-/* javascript */
-.active, .dot:hover{
-	border-color: #00a7ff; /* blue */
-}
-/* /javascript */
 
 /* muslide add fade */
 .fade {
@@ -180,7 +159,10 @@ input[type="radio"]:checked + label {
     background:yellow;
 }
 
-
+.img{
+	height: 100px;
+	width: 100px;
+}
 @-webkit-keyframes posi {
   from {left: 0%;}
   to {left: 20%;}
@@ -233,7 +215,7 @@ img{
 	.txt{
 		width: 400px;
 		letter-spacing: 2px;
-		line-height: 25px;
+		
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -264,6 +246,15 @@ img{
 	.txt p{
 		font-size: 13px;
 	}
+	.txt label {
+		padding:5px;
+		margin: 100px;	
+		border:1px solid #000;
+		border-radius:10px; 
+		cursor:pointer;
+		
+	   
+	}
 
 }
 /* /5 */
@@ -271,7 +262,7 @@ img{
 /* 6 */
 @media screen and (max-width: 520px){
 	.txt h1{
-		font-size: 30px;
+		font-size: 60px;
 		margin-bottom: 20px;
 	}
 	.sign{
@@ -279,6 +270,15 @@ img{
 	}
 	.sign a{
 		font-size: 12px;
+	}
+	.txt label {
+		padding:5px;
+		margin: 100px;	
+		border:1px solid #000;
+		border-radius:10px; 
+		cursor:pointer;
+		
+	   
 	}
 }
 /* /6 */
