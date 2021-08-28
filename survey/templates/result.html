@@ -1,14 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Survey result</title>
-</head>
-<body>
-	{{result.survey_user}}
-	<br>
-	{{result}}
-</body>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+
+        <title>Raisec-result</title>
+    </head>
+    <body>
+    <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                   
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                   
+                   {% if result.result == 'E' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Achiever.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Fashion Merchandising</p>
+                        <p class="home__description">⦁	Real Estate</p>
+                        <p class="home__description">⦁	Marketing</p>
+                        <p class="home__description">⦁	Sales</p>
+                        <p class="home__description">⦁	Law</p>
+                        <p class="home__description">⦁	Political Science</p>
+                        <p class="home__description">⦁	International Trade</p>
+                        <p class="home__description">⦁	Banking</p>
+                        <p class="home__description">⦁	Finance</p>
+                        
+                        {% endif %} 
+                        {% if result.result == 'R' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Adventurer.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Agriculture</p>
+                        <p class="home__description">⦁	Health Assistant</p>
+                        <p class="home__description">⦁	Computers</p>
+                        <p class="home__description">⦁	Construction</p>
+                        <p class="home__description">⦁	Mechanic/Machinist</p>
+                        <p class="home__description">⦁	Engineering</p>
+                        <p class="home__description">⦁	Food and Hospitality</p>
+                        
+                        
+                        {% endif %} 
+                        {% if result.result == 'A' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Creator.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Communications</p>
+                        <p class="home__description">⦁	Cosmetology</p>
+                        <p class="home__description">⦁	Fine and Performing Arts</p>
+                        <p class="home__description">⦁	Photography</p>
+                        <p class="home__description">⦁	Radio and TV</p>
+                        <p class="home__description">⦁	Interior Design</p>
+                        <p class="home__description">⦁	Architecture</p>
+                        <p class="home__description">⦁	Graphic design</p>
+                        
+                        
+                        {% endif %} 
+                        {% if result.result == 'I' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Explorer.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Marine Biology</p>
+                        <p class="home__description">⦁	Engineering</p>
+                        <p class="home__description">⦁	Chemistry</p>
+                        <p class="home__description">⦁	Zoology</p>
+                        <p class="home__description">⦁	Medicine/Surgery</p>
+                        <p class="home__description">⦁	Consumer Economics</p>
+                        <p class="home__description">⦁	Psychology</p>
+                        <p class="home__description">⦁	Project management</p>
+                        <p class="home__description">⦁	Business development</p>
+                        <p class="home__description">⦁	Data analysis</p>
+                        
+                        
+                        {% endif %} 
+                        {% if result.result == 'S' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Interactive.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Counseling</p>
+                        <p class="home__description">⦁	Nursing</p>
+                        <p class="home__description">⦁	Physical Therapy</p>
+                        <p class="home__description">⦁	Travel</p>
+                        <p class="home__description">⦁	Advertising</p>
+                        <p class="home__description">⦁	Public Relations</p>
+                        <p class="home__description">⦁	Education and Training</p>
+                        <p class="home__description">⦁	Partnerships</p>
+                        
+                        
+                        
+                        {% endif %} 
+                        {% if result.result == 'C' %}
+                       
+                   
+                       
+                    <div class="home__img">
+                        <img src="{% static 'img/Analyst.png'%}" alt="" data-speed="2" class="move">
+                        
+                    </div>
+
+                    <div class="home__data">
+                        
+                        <br><br>
+                        
+                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">⦁	Accounting</p>
+                        <p class="home__description">⦁	Court Reporting</p>
+                        <p class="home__description">⦁	Insurance</p>
+                        <p class="home__description">⦁	Administration</p>
+                        <p class="home__description">⦁	Medical Records</p>
+                        <p class="home__description">⦁	Banking</p>
+                        <p class="home__description">⦁	Data Processing</p>
+                        
+                        
+                        
+                        
+                        {% endif %} 
+                        <br>
+                        
+                       
+                        
+                        <a href="#" class="home__button">Another survey</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== GSAP =====-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="{%static 'js/result.js'%}"></script>
+    </body>
 </html>

@@ -47,4 +47,5 @@ def Survey(request, pk):
 def Result(request, pk):
     qs = SurveyResults.objects.get(pk = pk)
     context = {'result': qs}
+    print(qs.result)
     return render(request, 'result.html',  context)

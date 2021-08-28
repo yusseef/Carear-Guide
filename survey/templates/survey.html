@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header>
-		<div id="logo">E<span id="logo-s">Youth</span></div>
+		<div id="logo">EYouth <span id="logo-s">Career guide</span></div>
 		<span class="sign"><a class="act" href="#">RAISEC Test</a></span>
 		
 	</header>
@@ -18,18 +18,19 @@
 		<!-- fade css -->
 		{% csrf_token %}
 		
-		{% for question in questions %}
+	{% for question in questions %}
 		<div class="myslide fade">
 			<div class="txt">
+				<br>
 				<img class="img" src = "{{question.icon.url}}">
-				<p>{{question.question}}</p>
+				<p> {{question.question}}</p>
 				
-				
+				<br>
 				<input id="{{question.id}}" onclick="plusSlides(1)" type='radio' name="{{question.id}}" value="{{question.category}}">
-				<label for="{{question.id}}">Yes</label>
-				<br> 
+				<label for="{{question.id}}" class="label">&nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			
 				<input id="{{question.id}}1" onclick="plusSlides(1)" type='radio' name="{{question.id}}" value="no">
-				<label for="{{question.id}}1">No</label>
+				<label for="{{question.id}}1">&nbsp;&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<br><br>
 				
 				
@@ -46,7 +47,7 @@
         <div class="myslide fade">
 			<div class="txt">
 				
-				<p>You finished all questions</p>
+				<p>You finished all the questions</p>
 				
 				
 				<input type="submit" class="btn" value="see the result">
@@ -55,7 +56,7 @@
 				
 				
 			</div>
-			<img src="{% static 'img/img4.jpg'%}" style="width: 100%; height: 100%;">
+			<img src="{% static 'img/Background.jpg'%}" style="width: 100%; height: 100%;">
 		</div>
 		
 		
