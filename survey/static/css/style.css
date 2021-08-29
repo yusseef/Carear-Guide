@@ -103,7 +103,7 @@ form{
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: #FF9400;
+	background-color: #c00b0b;
 	transition: .4s;
 }
 
@@ -125,7 +125,7 @@ form{
 }
 
 .input-div.focus > .i > i{
-	color: #FF9400;
+	color: #c00b0b;
 }
 
 .input-div > div > input{
@@ -167,7 +167,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #FF9400, #FF9400, #FF9400);
+	background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
@@ -214,6 +214,9 @@ a:hover{
 
 	.wave{
 		display: none;
+		width:50%;
+		height:50%;
+
 	}
 
 	.login-content{

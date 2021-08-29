@@ -38,6 +38,7 @@ header{
 	line-height: 60px;
 	margin-right: 640px;
 	
+	
 }
 .sign a{
 	color: #fff;
@@ -49,10 +50,7 @@ header{
 	border-radius: 50px;
 	padding: 6px 15px;
 }
-.sign a:hover{
-	color: #fbff00; /* blue */
-	border-color: #fbff00; /* blue */
-}
+
 /* /1 */
 
 /* 2 */
@@ -114,25 +112,28 @@ header{
 
 /* 3 */
 .btn{
-border-radius: 50px;
-background: #5e0314;
-white-space:nowrap;
-padding: 10px 22px;
-color: #010606;
-font-size: 16px;
-outline: none;
-border:none;
-cursor:pointer;
-transition: all 0.2s ease-in-out;
-text-decoration: none;
-color:white;
+	
+	width: 50%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
+	background-size: 200%;
+	font-size: 1.2rem;
+	left:50%;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
 
 }
 
 .btn:hover {
     transition: all 0.2s ease-in-out;
-    background:  #A83E51;
-    color:#010606;
+    background-position: right;
 }
 .txt{
 	
@@ -164,6 +165,7 @@ color:white;
 	width: 20px;
 	left: 50%;
 	
+	
 }
 
 .txt label {
@@ -171,6 +173,7 @@ color:white;
 	height: 20px;
 	width: 20px;
 	left: 20%;
+	
 	border:1px solid #000;
 	border-radius:10px; 
 	cursor:pointer;
