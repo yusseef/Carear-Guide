@@ -32,7 +32,6 @@ def Survey(request, pk):
             answer = request.POST.get(f"{i}")
             lst.append(answer)
         List = [x for x in lst if not x=='no']
-        print(List)
         counter = Counter(List)
         result = counter.most_common(1)[0][0]
         Final_result = SurveyResults(survey_user= User)
@@ -47,5 +46,4 @@ def Survey(request, pk):
 def Result(request, pk):
     qs = SurveyResults.objects.get(pk = pk)
     context = {'result': qs}
-    print(qs.result)
     return render(request, 'result.html',  context)

@@ -3,7 +3,7 @@
 <head>
     {% load static %}
 	<title>Career development survey</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,12 +13,12 @@
 	
 	<div class="container">
 		<div class="img">
-			<img src="{% static 'img/svg7.svg'%}">
+			<img src="{% static 'img/Form.png'%}" width="105%" height="100%">
 		</div>
 		<div class="login-content">
 			<form action="" method="post">
 				{% csrf_token %}
-				<h2 class="title">Welcome to career development survey</h2>
+				<h2 class="title" >Welcome To Career Guide</h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -51,7 +51,7 @@
                  
               </div>
             	
-            	<input type="submit" class="btn" value="Start the survey">
+            	<input type="submit" class="btn" value="Start">
             </form>
         </div>
     </div>

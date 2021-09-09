@@ -2,20 +2,17 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
+	background: rgb(148,7,7);
+	background: linear-gradient(90deg, rgba(148,7,7,0.9444152661064426) 0%, rgba(228,38,9,1) 49%, rgba(148,7,7,1) 100%);
+	
 }
 
-.wave{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 100%;
-	z-index: -1;
-}
 
 .container{
     width: 100vw;
@@ -39,9 +36,7 @@ body{
 	text-align: center;
 }
 
-.img img{
-	width: 500px;
-}
+
 
 form{
 	width: 360px;
@@ -53,7 +48,7 @@ form{
 
 .login-content h2{
 	margin: 15px 0;
-	color: #333;
+	color: white;
 	text-transform: uppercase;
 	font-size: 2.9rem;
 }
@@ -64,7 +59,7 @@ form{
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 2px solid white;
 }
 
 .login-content .input-div.one{
@@ -72,12 +67,15 @@ form{
 }
 
 .i{
-	color: #d9d9d9;
+	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
+.title{
+	color:white;
+	
+}
 .i i{
 	transition: .3s;
 }
@@ -92,7 +90,7 @@ form{
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: #999;
+	color: white;
 	font-size: 18px;
 	transition: .3s;
 }
@@ -139,7 +137,7 @@ form{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
-	color: #555;
+	color: white;
 	font-family: 'poppins', sans-serif;
 }
 
@@ -151,7 +149,7 @@ a{
 	display: block;
 	text-align: right;
 	text-decoration: none;
-	color: #999;
+	color: white;
 	font-size: 0.9rem;
 	transition: .3s;
 }
@@ -167,10 +165,10 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
+	background-color: white;
 	background-size: 200%;
 	font-size: 1.2rem;
-	color: #fff;
+	color: red;
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	margin: 1rem 0;
@@ -178,7 +176,9 @@ a:hover{
 	transition: .5s;
 }
 .btn:hover{
-	background-position: right;
+	background-color: red;
+	
+	color: white;
 }
 
 
@@ -199,7 +199,7 @@ a:hover{
 	}
 
 	.img img{
-		width: 400px;
+		width: 500px;
 	}
 }
 
@@ -212,12 +212,7 @@ a:hover{
 		display: none;
 	}
 
-	.wave{
-		display: none;
-		width:50%;
-		height:50%;
-
-	}
+	
 
 	.login-content{
 		justify-content: center;

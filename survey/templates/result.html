@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+{% load social_share %}
 <html lang="en">
     <head>
+        
         {% load static %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +10,9 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+        <link rel="stylesheet" href="{% static 'css/result.css'%}">
 
-        <title>Raisec-result</title>
+        <title>E-youth Career guide</title>
     </head>
     <body>
     <!--===== HEADER =====-->
@@ -49,7 +51,7 @@
                         
                         <br><br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description"> {{result.survey_user}} you are an achiever <br>Achivers like to work with others and enjoy persuading and performing.<br> we recommend to you the following careers:</p>
                         <p class="home__description">⦁	Fashion Merchandising</p>
                         <p class="home__description">⦁	Real Estate</p>
                         <p class="home__description">⦁	Marketing</p>
@@ -74,7 +76,7 @@
                         
                         <br><br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description"> {{result.survey_user}} Adventurers are often good<br> at mechanical and athletic jobs. <br> we recommend to you the following careers:</p>
                         <p class="home__description">⦁	Agriculture</p>
                         <p class="home__description">⦁	Health Assistant</p>
                         <p class="home__description">⦁	Computers</p>
@@ -98,7 +100,7 @@
                         
                         <br><br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">{{result.survey_user}} Creators like to work in unstructured situations<br> where they can use their creativity.<br> we recommend to you the following careers:</p>
                         <p class="home__description">⦁	Communications</p>
                         <p class="home__description">⦁	Cosmetology</p>
                         <p class="home__description">⦁	Fine and Performing Arts</p>
@@ -123,7 +125,7 @@
                         
                         <br><br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">{{result.survey_user}} Explorers like to watch, learn<br>analyze and solve problems.<br> Good majors for explorers are:</p>
                         <p class="home__description">⦁	Marine Biology</p>
                         <p class="home__description">⦁	Engineering</p>
                         <p class="home__description">⦁	Chemistry</p>
@@ -150,7 +152,7 @@
                         
                         <br><br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">{{result.survey_user}} Interactives like to work with<br> other people rather than things. <br> we recommend to you the following careers:</p>
                         <p class="home__description">⦁	Counseling</p>
                         <p class="home__description">⦁	Nursing</p>
                         <p class="home__description">⦁	Physical Therapy</p>
@@ -174,9 +176,9 @@
 
                     <div class="home__data">
                         
-                        <br><br>
+                        <br>
                         
-                        <p class="home__description"> Congratulation {{result.survey_user}} <br> we recommend to you the following careers:</p>
+                        <p class="home__description">{{result.survey_user}} Analysts are very detail oriented, organized<br> and like to work with data. <br> we recommend to you the following careers:</p>
                         <p class="home__description">⦁	Accounting</p>
                         <p class="home__description">⦁	Court Reporting</p>
                         <p class="home__description">⦁	Insurance</p>
@@ -184,19 +186,28 @@
                         <p class="home__description">⦁	Medical Records</p>
                         <p class="home__description">⦁	Banking</p>
                         <p class="home__description">⦁	Data Processing</p>
-                        
-                        
-                        
-                        
+                    
                         {% endif %} 
-                        <br>
+                        <div class="social">
+                            <p class="home__description">Share your result via :</p>
+                            {% post_to_facebook object_or_url "Post to Facebook!" %}
+                            {% post_to_linkedin object_or_url %}
+                            
+                            {% post_to_twitter "Check out my E-youth career guide result !" object_or_url "Post to Twitter" %}
+
+
+                           </div>
+                           <br>
+                        </section>
+                
+                      
                         
-                       
-                        
-                        <a href="#" class="home__button">Another survey</a>
+
+
                     </div>
+                    
                 </div>
-            </section>
+                
         </main>
 
         <!--===== GSAP =====-->

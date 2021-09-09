@@ -12,11 +12,13 @@ header{
     width: 100%;
     position: absolute;
     top: 0%;
-	z-index: 2;
+	z-index: 1;
 }
 #logo{
+	margin-top: 20px;
     line-height: 60px;
     margin-left: 40px;
+	margin-right: 30px;
     display: inline-block;
 	cursor: pointer;
 	font-size: 30px;
@@ -55,41 +57,19 @@ header{
 
 /* 2 */
 .slider{
-	position: relative;
+	position: absolute;
 	width: 100%;
-	top:10%;
+	height: 90%;
+	
 	background: #2c3e50; /* darckblue */
 }
 .myslide{
-	height: 800px;
+	height: 1200px;
 	display:block;
 	overflow: hidden;
 }
 
-.prev, .next{
-	position: absolute;
-	top: 80%;
-	transform: translate(0, -50%);
-	font-size: 30px;
-	padding: 15px;
-	cursor: pointer;
-	color: #fff;
-	transition: 0.1s;
-	user-select: none;
-	height:10%;
-}
-.prev:hover, .next:hover{
-	color:white; /* blue */
-	background-color:rgba(255, 255, 0, 0.911);
-}
-.next{
-	border: 2px solid;
-	border-radius: 10px;
-	border-color: transparent;
-	background-color:white;
-	bottom:-20%;
-	right:48%;
-}
+
 
 /* muslide add fade */
 .fade {
@@ -108,7 +88,7 @@ header{
   from {opacity: 0.8}
   to {opacity: 1}
 }
-/* /muslide add fade */
+
 
 /* 3 */
 .btn{
@@ -118,7 +98,7 @@ header{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
+	background-color: #fc0019;
 	background-size: 200%;
 	font-size: 1.2rem;
 	left:50%;
@@ -133,8 +113,11 @@ header{
 
 .btn:hover {
     transition: all 0.2s ease-in-out;
-    background-position: right;
-}
+	background-color:white;
+	color:#fc0019;
+	border:solid;
+	border-color: #fc0019;
+	}
 .txt{
 	
 	width: 700px;
@@ -142,14 +125,14 @@ header{
 	border-style: solid;
 	border-color: transparent;
 	border-radius:20px;
-	left:25%;
+	left:18%;
 	background-color: aliceblue;
 	text-align:center;
 	position: relative;
 	color: rgb(0, 0, 0);
 	letter-spacing: 2px;
 	line-height: 35px;
-	top: 40%;
+	top: 20%;
 	
 	-webkit-animation-name: posi;
   	-webkit-animation-duration: 2s;
@@ -181,12 +164,13 @@ header{
    
 }
 .txt label:hover {
-	background: rgb(238, 255, 5);
+	background: #fc0019;
+	color:white;
 }
 
 
 input[type="radio"]:checked + label {
-    background:yellow;
+    background:#fc0019;
 }
 input[type="radio"] + label {
     
@@ -208,18 +192,14 @@ input[type="radio"] + label {
 
 @keyframes posi {
   from {left: 100%;}
-  to {left: 25%;}
+  to {left: 18%;}
+}
+.BG{
+	width: 100%;
+	height: 100%; 
+	object-fit:cover;
 }
 
-.txt h1{
-	color: #00a7ff; /* blue */
-	font-size: 50px;
-	margin-bottom: 20px;
-}
-.txt p{
-	font-weight: bold;
-	font-size: 20px;
-}
 /* /3 */
 
 /* 4 */
@@ -245,82 +225,70 @@ img{
 
 
 /* 5 */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 992px){
 	.myslide{
-		height: 900px;
+		height: 2000px;
+	}
+	.slider{
+		position: relative;
+		width: 100%;
+		height: 90%;
+		
+	}
+	p{
+		font-size:40px;
 	}
 	.txt{
-		width: 400px;
+		width: 600px;
+		height:500px;
 		letter-spacing: 2px;
-		
-		top: 50%;
+		text-align: center;
+		top: 30%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		-webkit-animation-name: posi2;
 		-webkit-animation-duration: 2s;
 		animation-name: posi2;
 		animation-duration: 2s;
+		font-size: 17px;
+		line-height: 50px;
 	}
-	.next{
-		top:70%;
-		right: 40%;
+	input[type="radio"] + label {
+    
+		padding:10px;
+		height: 200px;
+		width: 200px;
+		left: 200%;
+		
 	}
-
-	@-webkit-keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-
-	@keyframes posi2 {
-	  from {top: 35%;}
-	  to {top: 50%;}
-	}
-
-	.txt h1{
-		font-size: 40px;
-	}
-	.txt p{
-		font-size: 13px;
-	}
-	.txt label {
-		padding:5px;
-		margin: 100px;	
-		border:1px solid #000;
-		border-radius:10px; 
-		cursor:pointer;
+	.label {
+		
+		font-size: 17px;
 		
 	   
 	}
+	
+	
+	.img{
+		height: 200px;
+		width: 200px;
+	}
+	
+	@-webkit-keyframes posi2 {
+	  from {top: 10%;}
+	  to {top: 30%;}
+	}
+
+
+	
+
+	
+	
 
 }
 /* /5 */
 
 /* 6 */
-@media screen and (max-width: 520px){
-	.txt h1{
-		font-size: 60px;
-		margin-bottom: 20px;
-	}
-	.sign{
-		margin-right: 20px;
-	}
-	.sign a{
-		font-size: 12px;
-	}
-	.txt label {
-		padding:5px;
-		margin: 100px;	
-		border:1px solid #000;
-		border-radius:10px; 
-		cursor:pointer;
-		
-	   
-	}
-}
-/* /6 */
-
-
 
 
 
