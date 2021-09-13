@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import os
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,7 +16,7 @@ SECRET_KEY = 'django-insecure-k1dxi0cw3!1w04%sj*=2*pfaol=xskdb2=sulfi@bhw(ln)8j1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['career-guide-survey.herokuapp.com']
 
 
 # Application definition
@@ -68,10 +69,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'raisec',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost'
+        'NAME': 'delf0m83vri081',
+        'USER': 'xviivctzgthqwd',
+        'PASSWORD': 'c22adb23aec7a9dec136844480f6f2c4b10e630a9434f49a1227e1ce30cfd290',
+        'HOST': 'ec2-54-217-15-9.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -115,7 +117,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
