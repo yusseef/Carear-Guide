@@ -3,7 +3,7 @@ from django.db import models
 from django.core.validators import FileExtensionValidator
 # Create your models here.
 class SurveyUser(models.Model):
-    id = models.BigAutoField(primary_key=True, auto_created=True)
+    
     name = models.CharField(max_length = 60)
     email = models.EmailField(max_length = 255)
     phone = models.CharField(max_length = 60)
