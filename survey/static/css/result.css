@@ -37,7 +37,8 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: 500;
-  height: 100%;
+  height: 200%;
+  
   background: rgb(148,7,7);
 	background: linear-gradient(90deg, rgba(148,7,7,0.9444152661064426) 0%, rgba(228,38,9,1) 49%, rgba(148,7,7,1) 100%);
 }
@@ -116,7 +117,7 @@ img{
 /*===== HOME =====*/
 .home{
   background-color: var(--first-color);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .home__container{
@@ -132,14 +133,24 @@ img{
   width: 302px;
   height: 233px;
 }
+.home__button{
+  display: inline-block;
+  background-color: var(--first-color-dark);
+  color: var(--white-color);
+  padding: 1rem 1rem;
+  border-radius: .5rem;
+}
 
+.home__button:hover{
+  background-color: var(--first-color-darken);
+}
 .home__img img{
   position: absolute;
   top: 0;
   left: 0;
 }
 .social  {
-  margin-left:250px;
+  margin-left:0px;
 }
 
 

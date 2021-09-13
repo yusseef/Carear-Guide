@@ -7,8 +7,8 @@ from survey import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Signin),
-    path('<int:pk>/', views.Survey, name='user'),
-    path('result/<int:pk>/', views.Result, name='Result'),
+    path('<str:pk>/', views.Survey, name='user'),
+    path('result/<str:pk>/', views.Result, name='Result'),
     
 ]
 if settings.DEBUG:
