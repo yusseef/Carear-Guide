@@ -181,8 +181,8 @@ input[type="radio"] + label {
 }
 
 .img{
-	height: 100px;
-	width: 100px;
+	height: 95px;
+	width: 95px;
 }
 @-webkit-keyframes posi {
   from {left: 0%;}
