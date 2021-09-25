@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'survey',
     'django_social_share',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,18 @@ django_heroku.settings(locals())
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIA3TEZMNC36Z4EMVJV'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'careerguide'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+
