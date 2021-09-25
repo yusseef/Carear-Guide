@@ -127,8 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-##execlude
-!django_social_share
-!django_social_share-2.2.1.dist-info
-!*/
