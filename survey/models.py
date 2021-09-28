@@ -9,7 +9,7 @@ class SurveyUser(models.Model):
     phone = models.CharField(max_length = 60)
     
     def __str__(self):
-        return self.name
+        return self.email
 
 class Questions(models.Model):
     class CategoryChoices(models.TextChoices):

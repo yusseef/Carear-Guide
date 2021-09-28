@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'survey',
     'django_social_share',
     'storages',
+    'import_export',
 ]
 
 MIDDLEWARE = [
