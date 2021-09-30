@@ -127,7 +127,7 @@ django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 #S3 BUCKETS CONFIG
 
