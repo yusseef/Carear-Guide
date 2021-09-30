@@ -3,7 +3,9 @@ from .models import SurveyUser, Questions, SurveyResults
 from django.http import HttpResponse
 from .forms import SigninForm
 from collections import Counter
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
+@csrf_exempt
 def Signin(request):
    form = SigninForm()
    if request.method == 'POST':
@@ -17,7 +19,7 @@ def Signin(request):
    context = {'form': form}
    return render(request, 'index.html', context) 
    
-
+@csrf_exempt
 def Survey(request, pk):
     lst = []
     ID = []
@@ -42,7 +44,7 @@ def Survey(request, pk):
     context = {'qs':qs, 'questions':questions}
     return render(request, 'survey.html', context)
 
-
+@csrf_exempt
 def Result(request, pk):
     qs = SurveyResults.objects.get(pk = pk)
     context = {'result': qs}
